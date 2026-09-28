@@ -1,0 +1,55 @@
+{
+  "accuracy": 0.8610649471514991,
+  "precision": 0.7496758920015782,
+  "recall": 0.8791063520391301,
+  "f1_score": 0.8092485549132948,
+  "roc_auc": 0.9421299446978209,
+  "cv_f1_mean": 0.8072411457478903,
+  "cv_f1_std": 0.0015979462017420363,
+  "confusion_matrix": [
+    [
+      25559,
+      4441
+    ],
+    [
+      1829,
+      13300
+    ]
+  ],
+  "n_train": 180514,
+  "n_test": 45129,
+  "feature_names": [
+    "length_url",
+    "qty_dot_url",
+    "qty_hyphen_url",
+    "qty_underline_url",
+    "qty_slash_url",
+    "qty_questionmark_url",
+    "qty_equal_url",
+    "qty_at_url",
+    "qty_and_url",
+    "qty_exclamation_url",
+    "qty_tilde_url",
+    "qty_comma_url",
+    "qty_plus_url",
+    "qty_asterisk_url",
+    "qty_percent_url",
+    "domain_length",
+    "qty_dot_domain",
+    "qty_hyphen_domain",
+    "qty_underline_domain",
+    "qty_vowels_domain",
+    "domain_in_ip",
+    "directory_length",
+    "qty_dot_directory",
+    "qty_hyphen_directory",
+    "qty_slash_directory",
+    "file_length",
+    "params_length",
+    "qty_params",
+    "qty_equal_params",
+    "qty_and_params",
+    "email_in_url",
+    "url_shortened"
+  ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Phishing URL Detector</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      width: 320px; margin: 0; padding: 16px;
+      font-family: -apple-system, system-ui, "Segoe UI", sans-serif;
+      color: #1e293b;
+    }
+    h1 { font-size: 15px; margin: 0 0 10px; }
+    #url { font-size: 11px; color: #64748b; word-break: break-all; margin-bottom: 12px; }
+    #status {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px; border-radius: 8px; margin-bottom: 12px;
+      font-weight: 600; font-size: 14px;
+    }
+    #status.safe { background: #dcfce7; color: #166534; }
+    #status.danger { background: #fee2e2; color: #991b1b; }
+    #status.unknown { background: #f1f5f9; color: #475569; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .safe .dot { background: #16a34a; }
+    .danger .dot { background: #dc2626; }
+    .unknown .dot { background: #94a3b8; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    td { padding: 3px 0; }
+    td.k { color: #64748b; }
+    td.v { text-align: right; font-weight: 600; }
+    #signals { margin-top: 10px; font-size: 11px; color: #475569; }
+    #err { color: #b91c1c; font-size: 12px; margin-top: 8px; }
+    button#rescan {
+      margin-top: 12px; width: 100%; padding: 8px; border: none;
+      background: #1e293b; color: #fff; border-radius: 6px; cursor: pointer;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Phishing URL Detector</h1>
+  <div id="url">Loading current tab...</div>
+  <div id="status" class="unknown"><span class="dot"></span><span id="status-text">Checking...</span></div>
+  <table id="details" style="display:none">
+    <tr><td class="k">ML model score</td><td class="v" id="ml-score">-</td></tr>
+    <tr><td class="k">Heuristic score</td><td class="v" id="heur-score">-</td></tr>
+    <tr><td class="k">Final risk score</td><td class="v" id="final-score">-</td></tr>
+  </table>
+  <div id="signals"></div>
+  <div id="err"></div>
+  <button id="rescan">Re-check this page</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
